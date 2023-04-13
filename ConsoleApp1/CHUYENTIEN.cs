@@ -15,8 +15,9 @@ namespace ConsoleApp1
         protected string loinhan;
         private float khoandu = 500000;
         protected float conlai1;
-        
-        
+        private float khoandu1;
+
+
 
         public int Stk { get => this.stk; set => this.stk = value; }
         public string Ten { get => this.ten; set => this.ten = value; }
@@ -24,6 +25,7 @@ namespace ConsoleApp1
         public string Loinhan { get => this.loinhan; set => this.loinhan = value; }
         public float Conlai1 { get => this.conlai1; set => this.conlai1 = value; }
         public float Khoandu { get => this.khoandu; set => this.khoandu = value; }
+        public float Khoandu1 { get => this.khoandu1; set => this.khoandu1 = value; }
 
         public CHUYENTIEN() { }
 
@@ -35,6 +37,7 @@ namespace ConsoleApp1
             this.loinhan = loinhan;
             this.conlai1 = conlai1;
             this.khoandu = khoandu;
+            this.khoandu1 = khoandu1;
         }
         public virtual void nhap()
         {
@@ -51,16 +54,27 @@ namespace ConsoleApp1
         public void conlai()
         {
             
-            conlai1 = Khoandu - Sotien;
-            khoandu = conlai1;
-            if (conlai1 < 0)
+            if (Khoandu < 0)
             {
                 Console.WriteLine("Khoan du khong du de thuc hien giao dich");
             }
             else
             {
-                Console.WriteLine("Giao dich thanh cong");
-                Console.WriteLine("Khoan du cua ban hien tai: " + this.conlai1);
+                if(khoandu != 500000)
+                {
+                    conlai1 = khoandu1 - sotien;
+                    khoandu1 = conlai1;
+                    Console.WriteLine("Giao dich thanh cong");
+                    Console.WriteLine("Khoan du cua ban hien tai: " + this.khoandu1);
+                    
+                }
+                else
+                {
+                    conlai1 = khoandu - sotien;
+                    khoandu1 = conlai1;
+                    Console.WriteLine("Giao dich thanh cong");
+                    Console.WriteLine("Khoan du cua ban hien tai: " + this.khoandu1);
+                }
             }
         }
 
@@ -68,15 +82,15 @@ namespace ConsoleApp1
         {
 
             conlai1 = Khoandu + Sotien;
-            khoandu = conlai1;
-            if (conlai1 < 0)
+            Khoandu1 = conlai1;
+            if (Khoandu1 < 0)
             {
                 Console.WriteLine("Khoan du khong du de thuc hien giao dich");
             }
             else
             {
                 Console.WriteLine("Giao dich thanh cong");
-                Console.WriteLine("Khoan du cua ban hien tai: " + this.conlai1);
+                Console.WriteLine("Khoan du cua ban hien tai: " + this.khoandu1);
             }
         }
 
