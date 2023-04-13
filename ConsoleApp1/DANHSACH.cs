@@ -23,20 +23,23 @@ namespace ConsoleApp1
                 CHUYENTIEN ct = null;
                 char loai = ' ';
                 Console.WriteLine("Nhap ky tu (C) Chuyen khoan (B) chuyen khoan den ban be");
+                loai = Convert.ToChar(Console.ReadLine().ToUpper());
                 switch (loai)
                 {
                     case 'C':
                         {
+                            
                             ct = new CHUYENTIENDENNGANHANG();
                             ct.nhap();
-                            conlai();
+                            ct.conlai();
                             break;
                         }
                     case 'B':
                         {
+  
                             ct = new CHUYENTIENSANGBANBE();
                             ct.nhap();
-                            conlai();
+                            ct.conlai();
                             break;
                         }
                 }//END SWITCH
@@ -48,24 +51,12 @@ namespace ConsoleApp1
         }//end nhap
         public void lichsugd ()
         {
-            Console.WriteLine("Nguoi nhan |  So tien | Gioi gian nhan");
+            Console.WriteLine("Nguoi nhan |  So tien chuyen | So tien hien tai | Gioi gian nhan");
             foreach (CHUYENTIEN ct in listStaff.Values)
-                Console.WriteLine("{0,2} {1,10} {2,20}", ct.Ten, ct.Sotien, DateTime.Today);
+                Console.WriteLine("{0,2} -{1,10} {2,20} {3,20}", ct.Ten, ct.Sotien,ct.Conlai1, DateTime.Today);
         }//end lich su gd
 
-        public void conlai()
-        {
-            CHUYENTIEN ct = null;
-            ct.Khoandu = ct.Khoandu - ct.Sotien;
-            if (ct.Khoandu < 0)
-            {
-                Console.WriteLine("Khoan du khong du de thuc hien giao dich");
-            }
-            else
-            {
-                Console.WriteLine("Giao dich thanh cong");
-            }
-        }
+        
 
     }
 }

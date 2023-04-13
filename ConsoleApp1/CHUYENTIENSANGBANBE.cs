@@ -16,8 +16,8 @@ namespace ConsoleApp1
 
         public CHUYENTIENSANGBANBE() : base() { }
 
-        public CHUYENTIENSANGBANBE(string banbe,string nganhang,int stk,string ten, float sotien,string loinhan, float khoandu)
-                                   : base(stk,ten,sotien,loinhan,khoandu) 
+        public CHUYENTIENSANGBANBE(string banbe,string nganhang,int stk,string ten, float sotien,string loinhan, float khoandu,float conlai1)
+                                   : base(stk,ten,sotien,loinhan,khoandu,conlai1) 
         {
             this.banbe = banbe;
         }

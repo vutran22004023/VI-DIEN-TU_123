@@ -11,28 +11,30 @@ namespace ConsoleApp1
     {
         protected int stk;
         protected string ten;
-        protected float sotien = 0;
+        protected float sotien;
         protected string loinhan;
         private float khoandu = 500000;
-
-
+        protected float conlai1 ;
+        
+        
 
         public int Stk { get => this.stk; set => this.stk = value; }
         public string Ten { get => this.ten; set => this.ten = value; }
         public float Sotien { get => this.sotien; set => this.sotien = value; }
         public string Loinhan { get => this.loinhan; set => this.loinhan = value; }
+        public float Conlai1 { get => this.conlai1; set => this.conlai1 = value; }
         public float Khoandu { get => this.khoandu; set => this.khoandu = value; }
 
         public CHUYENTIEN() { }
 
-        public CHUYENTIEN(int stk, string ten, float sotien, string loinhan,float khoandu)
+        public CHUYENTIEN(int stk, string ten, float sotien, string loinhan,float conlai1,float khoandu)
         {
             this.stk = stk;
             this.ten = ten;
             this.sotien = sotien;
             this.loinhan = loinhan;
+            this.conlai1 = conlai1;
             this.khoandu = khoandu;
-            
         }
         public virtual void nhap()
         {
@@ -46,6 +48,20 @@ namespace ConsoleApp1
             this.loinhan = Console.ReadLine();
         }
 
+        public void conlai()
+        {
+            
+            conlai1 = Khoandu - Sotien;
+            if (conlai1 < 0)
+            {
+                Console.WriteLine("Khoan du khong du de thuc hien giao dich");
+            }
+            else
+            {
+                Console.WriteLine("Giao dich thanh cong");
+                Console.WriteLine("Khoan du cua ban hien tai: " + this.conlai1);
+            }
+        }
 
         public virtual void Xuat()
         {

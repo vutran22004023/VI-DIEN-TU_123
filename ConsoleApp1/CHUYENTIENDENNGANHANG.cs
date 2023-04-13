@@ -17,8 +17,8 @@ namespace ConsoleApp1
 
         }
 
-        public CHUYENTIENDENNGANHANG(string nganhang, int stk, string ten, float sotien, string loinhan,float khoandu)
-                               :base (stk,ten,sotien,loinhan,khoandu)
+        public CHUYENTIENDENNGANHANG(string nganhang, int stk, string ten, float sotien, string loinhan,float khoandu,float conlai1)
+                               :base (stk,ten,sotien,loinhan,khoandu,conlai1)
         {
             this.nganhang = nganhang;
         }
