@@ -89,7 +89,7 @@ namespace ConsoleApp1
         {
             Console.WriteLine("Nguoi nhan |  So tien chuyen | So tien hien tai | Gioi gian nhan");
             foreach (CHUYENTIEN ct in listStaff.Values)
-                Console.WriteLine("{0,2} -{1,10} {2,20} {3,20}", ct.Ten, ct.Sotien,ct.Conlai1, DateTime.Today);
+                Console.WriteLine("{0,2}  -{1,10} {2,20} {3,20}", ct.Ten, ct.Sotien,ct.Conlai1, DateTime.Today);
         }//end lich su gd
 
         
