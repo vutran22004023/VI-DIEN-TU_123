@@ -47,6 +47,7 @@
     <Compile Include="CHUYENTIENDENNGANHANG.cs" />
     <Compile Include="CHUYENTIENSANGBANBE.cs" />
     <Compile Include="DANHSACH.cs" />
+    <Compile Include="NAPTIENAPP.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

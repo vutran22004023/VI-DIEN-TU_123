@@ -15,7 +15,7 @@ namespace ConsoleApp1
             this.listStaff = new Dictionary<string, CHUYENTIEN>();
         }
 
-        public void Nhap()
+        public void Nhapchuyentien()
         {
             char c = 'y';
             while (c == 'y')
@@ -48,8 +48,44 @@ namespace ConsoleApp1
                     Console.WriteLine("Nha ky tu 'y' de tiep tuc");
                 c = Convert.ToChar(Console.ReadLine());
             }
-        }//end nhap
-        public void lichsugd ()
+        }//end nhap chuyen tien
+
+
+        public void NhapNaprut()
+        {
+            char c = 'y';
+            while (c == 'y')
+            {
+                CHUYENTIEN ct = null;
+                char loai = ' ';
+                Console.WriteLine("Nhap ky tu (N) Nap tien vao app (R) Rut tien ve ngan hang");
+                loai = Convert.ToChar(Console.ReadLine().ToUpper());
+                switch (loai)
+                {
+                    case 'N':
+                        {
+
+                            ct = new NAPTIENAPP();
+                            ct.nhap();
+                            ct.conlai12();
+                            break;
+                        }
+                    case 'R':
+                        {
+
+                            ct = new NAPTIENAPP();
+                            ct.nhap();
+                            ct.conlai();
+                            break;
+                        }
+                }//END SWITCH
+                if (ct != null)
+                    this.listStaff.Add(ct.Ten, ct);
+                Console.WriteLine("Nha ky tu 'y' de tiep tuc");
+                c = Convert.ToChar(Console.ReadLine());
+            }
+        }// nap rut 
+            public void lichsugd ()
         {
             Console.WriteLine("Nguoi nhan |  So tien chuyen | So tien hien tai | Gioi gian nhan");
             foreach (CHUYENTIEN ct in listStaff.Values)

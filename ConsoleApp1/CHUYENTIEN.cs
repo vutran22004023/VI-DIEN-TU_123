@@ -14,7 +14,7 @@ namespace ConsoleApp1
         protected float sotien;
         protected string loinhan;
         private float khoandu = 500000;
-        protected float conlai1 ;
+        protected float conlai1;
         
         
 
@@ -52,6 +52,23 @@ namespace ConsoleApp1
         {
             
             conlai1 = Khoandu - Sotien;
+            khoandu = conlai1;
+            if (conlai1 < 0)
+            {
+                Console.WriteLine("Khoan du khong du de thuc hien giao dich");
+            }
+            else
+            {
+                Console.WriteLine("Giao dich thanh cong");
+                Console.WriteLine("Khoan du cua ban hien tai: " + this.conlai1);
+            }
+        }
+
+        public void conlai12()
+        {
+
+            conlai1 = Khoandu + Sotien;
+            khoandu = conlai1;
             if (conlai1 < 0)
             {
                 Console.WriteLine("Khoan du khong du de thuc hien giao dich");
