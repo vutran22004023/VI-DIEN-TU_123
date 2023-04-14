@@ -138,5 +138,69 @@ namespace ConsoleApp1
                 c = Convert.ToChar(Console.ReadLine());
             }
         }// nap rut 
+
+        public void Thanhtoanhoadon()
+        {
+            char c = 'y';
+            while (c == 'y')
+            {
+                CHUYENTIEN ct = null;
+                char loai = ' ';
+                Console.WriteLine("Chon dich vu");
+                Console.WriteLine("1. Thanh toan  dien");
+                Console.WriteLine("2. Thanh toan  nuoc");
+                Console.WriteLine("3. Thanh toan  internet");
+                Console.WriteLine("4. Thanh toan  Hoc phi");
+                Console.WriteLine("5. Thanh toan truyen hinh");
+                loai = Convert.ToChar(Console.ReadLine().ToUpper());
+                switch (loai)
+                {
+                    case '1':
+                        {
+
+                            ct = new THANHTOANHOADON();
+                            ct.nhap();
+                            ct.conlai();
+                            break;
+                        }
+                    case '2':
+                        {
+
+                            ct = new THANHTOANHOADON();
+                            ct.nhap();
+                            ct.conlai();
+                            break;
+                        }
+                    case '3':
+                        {
+
+                            ct = new THANHTOANHOADON();
+                            ct.nhap();
+                            ct.conlai();
+                            break;
+                        }
+                    case '4':
+                        {
+
+                            ct = new THANHTOANHOADON();
+                            ct.nhap();
+                            ct.conlai();
+                            break;
+                        }
+                    case '5':
+                        {
+
+                            ct = new THANHTOANHOADON();
+                            ct.nhap();
+                            ct.conlai();
+                            break;
+                        }
+                }//END SWITCH
+                if (ct != null)
+                    this.listStaff.Add(ct.Ten, ct);
+                Console.WriteLine("Nha ky tu 'y' de tiep tuc");
+                c = Convert.ToChar(Console.ReadLine());
+            }
+        }// nap rut 
     }
 }

@@ -18,8 +18,8 @@ namespace ConsoleApp1
                 Console.WriteLine("Nhap tu 1-6 de thuc hien cac chuc nang sau: ");
                 Console.WriteLine("1. Chuyen tien");
                 Console.WriteLine("2. Nap tien/rut vao app");
-                Console.WriteLine("4. Thanh Toan hoa don");
-                Console.WriteLine("5. Lich su giao dich");
+                Console.WriteLine("3. Thanh Toan hoa don");
+                Console.WriteLine("4. Lich su giao dich");
                 int menu = 0;
                 menu= Convert.ToInt32(Console.ReadLine());
                 switch(menu)
@@ -34,7 +34,12 @@ namespace ConsoleApp1
                             danhsach.NhapNaprut();
                             break;
                         }
-                    case 5:
+                    case 3:
+                        {
+                            danhsach.Thanhtoanhoadon();
+                            break;
+                        }
+                    case 4:
                         {
                             danhsach.lichsugd();
                             break;
