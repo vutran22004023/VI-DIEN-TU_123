@@ -23,9 +23,10 @@ namespace ConsoleApp1
         protected string email;
         protected string diachi;
         protected string nghenghiep;
+        protected string conlai;
 
 
-
+        
         public int Stk { get => this.stk; set => this.stk = value; }
         public string Ten { get => this.ten; set => this.ten = value; }
         public float Sotien { get => this.sotien; set => this.sotien = value; }
