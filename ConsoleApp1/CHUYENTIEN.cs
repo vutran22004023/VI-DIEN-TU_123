@@ -15,7 +15,7 @@ namespace ConsoleApp1
         protected string loinhan;
         private float khoandu = 500000;
         protected float conlai1;
-        protected string hoten;
+        protected string hoten ;
         protected string gioitinh;
         protected DateTime ngaysinh;
         protected int cmnd;

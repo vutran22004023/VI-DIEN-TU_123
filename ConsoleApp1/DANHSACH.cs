@@ -104,7 +104,7 @@ namespace ConsoleApp1
 
                             Console.WriteLine("Nguoi nhan |  So tien chuyen | So tien hien tai | Gioi gian nhan");
                             foreach (CHUYENTIEN sv in listStaff.Values)
-                            Console.WriteLine("{0,2}  -{1,10} {2,20} {3,20}", sv.Ten, sv.Sotien, sv.Conlai1, DateTime.Today);
+                            Console.WriteLine("{0,20}  -{1,20} {2,20} {3,20}", sv.Ten, sv.Sotien, sv.Khoandu, DateTime.Today);
                             break;
                         }
                     case 'N':
@@ -112,14 +112,14 @@ namespace ConsoleApp1
 
                             Console.WriteLine("  So tien nap | So tien hien tai | Gioi gian Nap");
                             foreach (NAPTIENAPP nt in listStaff.Values)
-                            Console.WriteLine("{+1,10} {2,20} {3,20}",nt.Sotien, nt.Conlai1, DateTime.Today);
+                            Console.WriteLine("{2,10} {2,20} {3,20}",nt.Sotien, nt.Khoandu, DateTime.Today);
                             break;
                         }
                     case 'R':
                         {
                             Console.WriteLine("  So tien rut | So tien hien tai | Gioi gian Rut");
                             foreach (NAPTIENAPP nt in listStaff.Values)
-                                Console.WriteLine("{-1,10} {2,20} {3,20}", nt.Sotien, nt.Conlai1, DateTime.Today);
+                                Console.WriteLine("-{1,20} {2,20} {3,20}", nt.Sotien, nt.Khoandu, DateTime.Today);
                             break;
                         }
                 }//END SWITCH
@@ -216,7 +216,7 @@ namespace ConsoleApp1
                     case 'X':
                         {
                             Console.WriteLine("  Ho va ten | Gioi tinh | Ngay sinh | CMDD | Noi cap | email | Dia chi | Nghe Nghiep");
-                            foreach (CHUYENTIEN tt in listStaff.Values)
+                            foreach (THONGTINCANHAN tt in listStaff.Values)
                             Console.WriteLine("{1,10} {2,20} {3,20} {4,20} {5,20} {6,20} {7,20} {8,20}  ", tt.Hoten, tt.Gioitinh, tt.Ngaysinh, tt.Cmnd, tt.Noi_cap,tt.Email,tt.Diachi,tt.Nghenghiep);
                             break;
                         }
