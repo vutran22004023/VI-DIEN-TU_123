@@ -46,6 +46,7 @@
     <Compile Include="CHUYENTIEN.cs" />
     <Compile Include="CHUYENTIENDENNGANHANG.cs" />
     <Compile Include="CHUYENTIENSANGBANBE.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="DANHSACH.cs" />
     <Compile Include="NAPTIENAPP.cs" />
     <Compile Include="Program.cs" />

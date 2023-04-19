@@ -15,6 +15,21 @@ namespace ConsoleApp1
             this.listStaff = new Dictionary<string, CHUYENTIEN>();
         }
 
+      //  Dictionary<String, dangnhap> keyValuePairs;
+      //  public DANHSACH()
+      //  {
+       //     this.keyValuePairs = new Dictionary<String, dangnhap>();
+       // }
+
+
+        public void dangnhapvao()
+        {
+            dangnhap ct = null;
+            Console.WriteLine("----------------------------------");
+            Console.WriteLine("            DANG NHAP             ");
+            
+        }
+
         public void Nhapchuyentien()
         {
             char c = 'y';
