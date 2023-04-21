@@ -34,6 +34,7 @@ namespace ConsoleApp1
                 CHUYENTIEN ct = null;
                 char loai = ' ';
                 Console.WriteLine("Nhap ky tu (C) Chuyen khoan (B) chuyen khoan den ban be");
+                Console.WriteLine("(T) De thoat");
                 loai = Convert.ToChar(Console.ReadLine().ToUpper());
                 switch (loai)
                 {
@@ -53,6 +54,10 @@ namespace ConsoleApp1
                             ct.conlai();
                             break;
                         }
+                    case 'T':
+                        {
+                            break;
+                        }
                 }//END SWITCH
                 if (ct != null)
                     this.listStaff.Add(ct.Ten, ct);
@@ -70,6 +75,7 @@ namespace ConsoleApp1
                 CHUYENTIEN ct = null;
                 char loai = ' ';
                 Console.WriteLine("Nhap ky tu (N) Nap tien vao app (R) Rut tien ve ngan hang");
+                Console.WriteLine("(T) Thoat ra menu");
                 loai = Convert.ToChar(Console.ReadLine().ToUpper());
                 switch (loai)
                 {
@@ -87,6 +93,10 @@ namespace ConsoleApp1
                             ct = new NAPTIENAPP();
                             ct.nhap();
                             ct.conlai();
+                            break;
+                        }
+                    case 'T':
+                        {
                             break;
                         }
                 }//END SWITCH
@@ -115,6 +125,7 @@ namespace ConsoleApp1
             {
                 char loai = ' ';
                 Console.WriteLine("Nhap ky tu (C) Xem lich su chuyen tien (N) Xem lich su nap tien (R)Xem lich su Rut Tien");
+                Console.WriteLine("(T) Thoat ra menu");
                 loai = Convert.ToChar(Console.ReadLine().ToUpper());
                 switch (loai)
                 {
@@ -123,7 +134,7 @@ namespace ConsoleApp1
 
                             Console.WriteLine("Nguoi nhan |  So tien chuyen | So tien hien tai | Gioi gian nhan");
                             foreach (CHUYENTIEN sv in listStaff.Values)
-                            Console.WriteLine("{0,2}  -{1,10} {2,20} {3,20}", sv.Ten, sv.Sotien, sv.Khoandu1, DateTime.Today);
+                            Console.WriteLine("{0,2}   {1,10}  {2,20} {3,40}", sv.Ten, sv.Sotien, sv.Khoandu1, DateTime.Today);
                             break;
                         }
                     case 'N':
@@ -139,6 +150,10 @@ namespace ConsoleApp1
                             Console.WriteLine("  So tien rut | So tien hien tai | Gioi gian Rut");
                             foreach (NAPTIENAPP nt in listStaff.Values)
                                 Console.WriteLine("{-1,10} {2,20} {3,20}", nt.Sotien, nt.Khoandu1, DateTime.Today);
+                            break;
+                        }
+                    case 'T':
+                        {
                             break;
                         }
                 }//END SWITCH

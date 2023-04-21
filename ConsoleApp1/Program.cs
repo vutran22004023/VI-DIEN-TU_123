@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,8 +17,9 @@ namespace ConsoleApp1
         {
             try
             {
-
-                Console.WriteLine("\x1b[94m-----------------------------------------------");
+                Console.Clear();
+                Console.WriteLine("\x1b[32m\x1b[3m                     MEMEPAY                       \x1b[0m");
+                Console.WriteLine("\x1b[96m-----------------------------------------------");
                 Console.WriteLine("| Nhap tu 1-6 de thuc hien cac chuc nang sau: |");
                 Console.WriteLine("| 1. Chuyen tien                              |");
                 Console.WriteLine("| 2. Nap tien/rut vao app                     |");
@@ -58,6 +60,7 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
+            
             danhsach = new DANHSACH();
             danhsach.dangnhapvao();
             char c = 'y';
