@@ -59,6 +59,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             danhsach = new DANHSACH();
+            danhsach.dangnhapvao();
             char c = 'y';
             while (c == 'y')
             {
