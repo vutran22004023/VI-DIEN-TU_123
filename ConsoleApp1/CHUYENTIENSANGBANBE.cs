@@ -24,7 +24,7 @@ namespace ConsoleApp1
 
         public override void nhap()
         {
-            Console.Write("Nhap ten ban be: ");
+            Console.Write("Nhap ten ban be:");
             this.banbe = Console.ReadLine();
             Console.Write("Nhap ngan hang: ");
             this.nganhang = Console.ReadLine();

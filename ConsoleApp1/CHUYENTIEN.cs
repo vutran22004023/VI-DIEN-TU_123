@@ -97,6 +97,8 @@ namespace ConsoleApp1
         }
 
         public void hamnap(float sotien)
+
+        public void conlai12()
         {
             khoandu += sotien;
             Console.WriteLine("Da nap {0} tu tai khoan.So du hien tai: {1}", sotien, khoandu);
