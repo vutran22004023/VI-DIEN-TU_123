@@ -86,7 +86,7 @@ namespace ConsoleApp1
 
                             ct = new NAPTIENAPP();
                             ct.nhap();
-                            ct.hamnap(ct.Sotien);
+                            ct.conlai12();
                             break;
                         }
                     case 'R':
@@ -94,7 +94,7 @@ namespace ConsoleApp1
 
                             ct = new NAPTIENAPP();
                             ct.nhap();
-                            ct.hamrut(ct.Sotien);
+                            ct.conlai12();
                             break;
                         }
                     case 'T':
@@ -126,7 +126,7 @@ namespace ConsoleApp1
 
                             Console.WriteLine("Nguoi nhan |  So tien chuyen | So tien hien tai | Gioi gian nhan");
                             foreach (CHUYENTIEN sv in listStaff.Values)
-                            Console.WriteLine("{0,2}  -{1,10} {2,20} {3,20}", sv.Ten, sv.Sotien, sv.Khoandu1, DateTime.Today);
+                            Console.WriteLine("{0,2}  -{1,10} {2,20} {3,20}", sv.Ten, sv.Sotien, sv.Khoandu, DateTime.Today);
                             break;
                         }
                     case 'N':

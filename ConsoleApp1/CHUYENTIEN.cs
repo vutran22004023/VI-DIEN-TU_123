@@ -96,7 +96,6 @@ namespace ConsoleApp1
             
         }
 
-        public void hamnap(float sotien)
 
         public void conlai12()
         {
